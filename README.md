@@ -1,7 +1,7 @@
 # Thread Generator WPF Application
 
 ## Aprašymas
-WPF aplikacija, kuri leidžia vartotojui generuoti atsitiktines eilutes naudojant kelias thread'as ir išsaugoti rezultatus į SQL Server duomenų bazę.
+WPF aplikacija UVS atrankai
 
 ## Funkcionalumas
 - **Thread kiekio nustatymas**: 2-15 thread'ų

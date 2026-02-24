@@ -11,7 +11,7 @@ namespace ThreadGeneratorApp
 
         public DatabaseService()
         {
-            // Update this connection string to match your SQL Server configuration
+           
             _connectionString = "Server=localhost\\SQLEXPRESS;Database=ThreadGeneratorDB;Trusted_Connection=true;TrustServerCertificate=True;";
             _masterConnectionString = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=true;TrustServerCertificate=True;";
         }
@@ -22,7 +22,7 @@ namespace ThreadGeneratorApp
             {
                 await masterConnection.OpenAsync();
 
-                // Create database if it doesn't exist
+                //Sukuriam jeigu db nera
                 string createDbQuery = @"
                         IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'ThreadGeneratorDB')
                         BEGIN
@@ -35,7 +35,7 @@ namespace ThreadGeneratorApp
                 }
             }
 
-            // Connect to the specific database and create table
+            // connectas
             using (var appConnection = new SqlConnection(_connectionString))
             {
                 await appConnection.OpenAsync();
@@ -82,7 +82,7 @@ namespace ThreadGeneratorApp
             }
             catch (Exception ex)
             {
-                // Log error but don't throw to avoid stopping threads
+                //back logas erroru
                 Console.WriteLine($"Database save error: {ex.Message}");
             }
         }

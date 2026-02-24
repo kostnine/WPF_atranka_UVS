@@ -27,10 +27,7 @@ CREATE TABLE ThreadResults (
 );
 ```
 
-## Paleidimas
-1. Įsitikinkite, kad turite .NET 6.0+ ir SQL Server
-2. Atidarykite projektą Visual Studio
-3. Paleiskite aplikaciją (F5)
+
 
 ## Connection String
 Pakeiskite `DatabaseService.cs` faile connection string pagal savo SQL Server konfigūraciją:
